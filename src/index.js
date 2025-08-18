@@ -23,11 +23,12 @@ import LoginComponent from './Components/Dynamic Style Changing/LoginComponent';
 import FormComponent from './Components/Form Validation/FormComponent';
 import FormikDemo from './Components/Form Validation/FomikDemo';
 import FormikValidation from './Components/Form Validation/FormikValidation';
+import YupValidation from './Components/Form Validation/YupValidation';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <FormikValidation/>
+    <YupValidation/>
   </React.StrictMode>
 );
 
