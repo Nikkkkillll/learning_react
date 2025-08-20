@@ -25,11 +25,12 @@ import FormikDemo from './Components/Form Validation/FomikDemo';
 import FormikValidation from './Components/Form Validation/FormikValidation';
 import YupValidation from './Components/Form Validation/YupValidation';
 import FormikComponentValidation from './Components/Form Validation/FormikComponentValidation';
+import LifeCycleClassComponent from './Components/Component Life cycle Hooks/LifeCycleClassDemo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <FormikComponentValidation/>
+    <LifeCycleClassComponent/>
   </React.StrictMode>
 );
 
