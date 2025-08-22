@@ -27,11 +27,12 @@ import YupValidation from './Components/Form Validation/YupValidation';
 import FormikComponentValidation from './Components/Form Validation/FormikComponentValidation';
 import LifeCycleClassComponent from './Components/Component Life cycle Hooks/LifeCycleClassDemo';
 import UseStateEffect from './Components/Hooks/UseStateEffect';
+import UseContextComponent from './Components/Hooks/UseContextComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UseStateEffect/>
+    <UseContextComponent/>
   </React.StrictMode>
 );
 
