@@ -28,11 +28,15 @@ import FormikComponentValidation from './Components/Form Validation/FormikCompon
 import LifeCycleClassComponent from './Components/Component Life cycle Hooks/LifeCycleClassDemo';
 import UseStateEffect from './Components/Hooks/UseStateEffect';
 import UseContextComponent from './Components/Hooks/UseContextComponent';
+import UseCookie from './Components/Hooks/UseCookie';
+import { CookiesProvider } from 'react-cookie';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UseContextComponent/>
+    <CookiesProvider>
+    <UseCookie/>
+    </CookiesProvider>
   </React.StrictMode>
 );
 
