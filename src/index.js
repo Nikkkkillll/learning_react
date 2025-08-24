@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
- 
+
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
 import App from './App';
@@ -30,13 +30,15 @@ import UseStateEffect from './Components/Hooks/UseStateEffect';
 import UseContextComponent from './Components/Hooks/UseContextComponent';
 import UseCookie from './Components/Hooks/UseCookie';
 import { CookiesProvider } from 'react-cookie';
+import ReducerDemo from './Components/Hooks/ReducerDemo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CookiesProvider>
-    <UseCookie/>
-    </CookiesProvider>
+    {/* <CookiesProvider>
+      <UseCookie />
+    </CookiesProvider> */}
+    <ReducerDemo/>
   </React.StrictMode>
 );
 
