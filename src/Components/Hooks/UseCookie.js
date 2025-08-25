@@ -1,8 +1,11 @@
 import { useState,useEffect } from "react"
 import { useCookies   } from "react-cookie"
+import { useCaptcha } from "../Custom Hook/useCaptcha";
 export default function UseCookie(){
     const [cookies,setCookie,removeCookie]=useCookies(['username']);
-    const [userDetails,setUserDetails]=useState({UserName:'',Password:''});
+    const [userDetails,setUserDetails]=useState
+    ({UserName:'',Password:''});
+    const[code]=useCaptcha();
 
     function handleUserName(e){
         setUserDetails({
@@ -41,6 +44,8 @@ export default function UseCookie(){
             <dd><input onChange={handleUserName} type="text"/></dd>
             <dt>Password</dt>
             <dd><input onChange={handlePassword} type="password"/></dd>
+            <dt>Verify Code</dt>
+            <dd>{code.code}</dd>
         </dl>
         <button onClick={handleLogin}>Login</button>
         <div>

@@ -31,14 +31,15 @@ import UseContextComponent from './Components/Hooks/UseContextComponent';
 import UseCookie from './Components/Hooks/UseCookie';
 import { CookiesProvider } from 'react-cookie';
 import ReducerDemo from './Components/Hooks/ReducerDemo';
+import CustomHookDemo from './Components/Custom Hook/CustomHookDemo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <CookiesProvider>
+    <CookiesProvider>
       <UseCookie />
-    </CookiesProvider> */}
-    <ReducerDemo/>
+    </CookiesProvider>
+    
   </React.StrictMode>
 );
 

@@ -17,13 +17,7 @@ export default function ReducerDemo() {
     const [state, dispatch] = useReducer(reducer, initialState);
     const [product, setProduct] = useState({});
 
-    useEffect(() => {
-        fetch("http://fakestoreapi.com/product/2")
-            .then(response => response.json())
-            .then(data => {
-                setProduct(data);
-            })
-    }, [])
+    
     function handleLikeClick() {
         dispatch({ type: 'like' });
     }
