@@ -32,14 +32,17 @@ import UseCookie from './Components/Hooks/UseCookie';
 import { CookiesProvider } from 'react-cookie';
 import ReducerDemo from './Components/Hooks/ReducerDemo';
 import CustomHookDemo from './Components/Custom Hook/CustomHookDemo';
+import JqueryAjaxDemo from './Sending data from backend to fronend using ajax/JqueryAjaxDemo';
+import JqueryAjaxPost from './Sending data from react to Mongodb POST/JqueryAjaxPost';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CookiesProvider>
+    {/* <CookiesProvider>
       <UseCookie />
     </CookiesProvider>
-    
+     */}
+    <JqueryAjaxPost/>
   </React.StrictMode>
 );
 
