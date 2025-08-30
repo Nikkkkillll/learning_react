@@ -34,6 +34,8 @@ import ReducerDemo from './Components/Hooks/ReducerDemo';
 import CustomHookDemo from './Components/Custom Hook/CustomHookDemo';
 import JqueryAjaxDemo from './Sending data from backend to fronend using ajax/JqueryAjaxDemo';
 import JqueryAjaxPost from './Sending data from react to Mongodb POST/JqueryAjaxPost';
+import { Axios } from 'axios';
+import AxiosDemo from './Axios/AxioxDemo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -42,7 +44,8 @@ root.render(
       <UseCookie />
     </CookiesProvider>
      */}
-    <JqueryAjaxPost/>
+    {/* <JqueryAjaxPost/> */} 
+    <AxiosDemo/>
   </React.StrictMode>
 );
 
