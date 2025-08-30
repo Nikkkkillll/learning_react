@@ -36,6 +36,7 @@ import JqueryAjaxDemo from './Sending data from backend to fronend using ajax/Jq
 import JqueryAjaxPost from './Sending data from react to Mongodb POST/JqueryAjaxPost';
 import { Axios } from 'axios';
 import AxiosDemo from './Axios/AxioxDemo';
+import ShoppingIndex from './Routing/ShoppingIndex';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -45,7 +46,7 @@ root.render(
     </CookiesProvider>
      */}
     {/* <JqueryAjaxPost/> */} 
-    <AxiosDemo/>
+    <ShoppingIndex/>
   </React.StrictMode>
 );
 
