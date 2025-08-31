@@ -37,6 +37,7 @@ import JqueryAjaxPost from './Sending data from react to Mongodb POST/JqueryAjax
 import { Axios } from 'axios';
 import AxiosDemo from './Axios/AxioxDemo';
 import ShoppingIndex from './Routing/ShoppingIndex';
+import SPAcomponent from './Routing/SPAcomponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -46,7 +47,8 @@ root.render(
     </CookiesProvider>
      */}
     {/* <JqueryAjaxPost/> */} 
-    <ShoppingIndex/>
+    {/* <ShoppingIndex/> */}
+    <SPAcomponent/>
   </React.StrictMode>
 );
 
