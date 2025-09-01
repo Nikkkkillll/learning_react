@@ -39,6 +39,8 @@ import AxiosDemo from './Axios/AxioxDemo';
 import ShoppingIndex from './Routing/ShoppingIndex';
 import SPAcomponent from './Routing/SPAcomponent';
 
+import IShopIndex from './IShop/IShopIndex';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -48,7 +50,10 @@ root.render(
      */}
     {/* <JqueryAjaxPost/> */} 
     {/* <ShoppingIndex/> */}
-    <SPAcomponent/>
+    <CookiesProvider>
+      <IShopIndex/>
+    </CookiesProvider>
+    
   </React.StrictMode>
 );
 
