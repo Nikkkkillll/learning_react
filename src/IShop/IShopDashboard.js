@@ -1,17 +1,30 @@
 import { useCookies } from "react-cookie";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function IShopDashboard() {
   const [cookies, setCookie, removeCookie] = useCookies(["userid"]);
   const [userid, setUserId] = useState();
+  const [categories,setCategories]=useState([]);
   let navigate=useNavigate();
+  
+  function LoadCategories(){
+    axios.get("http://127.0.0.1:4000/getcategories")
+    .then(response=>{
+      setCategories(response.data)
+    })
+  }
+
+
   useEffect(() => {
     
     if(cookies["userid"]==undefined){
         navigate("/login")
     }else{
         setUserId(cookies["userid"]);
+        LoadCategories();
     }
   }, [cookies]);
 
@@ -27,11 +40,18 @@ export default function IShopDashboard() {
         onClick={handleSignOut}
           className="btn btn-link"
         //   onClick={() => removeCookie("userid", { path: "/login" })}
-    
         >
           SignOut
         </button>
       </h2>
+      <h3>Product Categories</h3>
+      <ol>
+        {
+          categories.map(item=>
+            <li key={item.category}><Link to={"/products/"+item.category}>{item.category.toUpperCase()}</Link></li>
+          )
+        }
+      </ol>
     </div>
   );
 }

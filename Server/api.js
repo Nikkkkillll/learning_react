@@ -59,3 +59,42 @@ app.post("/registeruser", async (req, res) => {
     res.status(500).json({ error: "Failed to insert user" });
   }
 });
+
+// GET all products
+app.get("/getproducts", async (req, res) => {
+  try {
+    const products = await db.collection("tblproducts").find({}).toArray();
+    res.json(products);
+  } catch (err) {
+    console.error("Error fetching products:", err);
+    res.status(500).json({ error: "Failed to fetch products" });
+  }
+});
+
+// GET all categories
+app.get("/getcategories", async (req, res) => {
+  try {
+    const categories = await db.collection("tblcategories").find({}).toArray();
+    res.json(categories);
+  } catch (err) {
+    console.error("Error fetching categories:", err);
+    res.status(500).json({ error: "Failed to fetch categories" });
+  }
+});
+
+// GET product by id
+app.get("/getproducts/:id", async (req, res) => {
+  try {
+    const productId = parseInt(req.params.id);
+    const product = await db.collection("tblproducts").findOne({ id: productId });
+
+    if (product) {
+      res.json(product);
+    } else {
+      res.status(404).json({ error: "Product not found" });
+    }
+  } catch (err) {
+    console.error("Error fetching product:", err);
+    res.status(500).json({ error: "Failed to fetch product" });
+  }
+});
