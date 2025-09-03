@@ -25,7 +25,7 @@ export default function(){
                     products.filter(item=>item.category==category).map(products=>
                         <li key={products.id}>
                             <img src={products.image} width="50" height="50"/>
-                            <div>{products.title}</div>
+                            <div><Link to={"/details/"+products.id}>{products.title}</Link> </div>
                         </li>
                     )
                 }
