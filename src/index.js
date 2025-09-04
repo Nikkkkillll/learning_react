@@ -40,6 +40,7 @@ import ShoppingIndex from './Routing/ShoppingIndex';
 import SPAcomponent from './Routing/SPAcomponent';
 
 import IShopIndex from './IShop/IShopIndex';
+import MainComponent from './BankApp/MainComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -50,10 +51,10 @@ root.render(
      */}
     {/* <JqueryAjaxPost/> */} 
     {/* <ShoppingIndex/> */}
-    <CookiesProvider>
+    {/* <CookiesProvider>
       <IShopIndex/>
-    </CookiesProvider>
-    
+    </CookiesProvider> */}
+    <MainComponent/>
   </React.StrictMode>
 );
 
