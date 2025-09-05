@@ -41,6 +41,7 @@ import SPAcomponent from './Routing/SPAcomponent';
 
 import IShopIndex from './IShop/IShopIndex';
 import MainComponent from './BankApp/MainComponent';
+import SearchDemo from './Components/Hooks/SearchDemo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -54,7 +55,7 @@ root.render(
     {/* <CookiesProvider>
       <IShopIndex/>
     </CookiesProvider> */}
-    <MainComponent/>
+    <SearchDemo/>
   </React.StrictMode>
 );
 
