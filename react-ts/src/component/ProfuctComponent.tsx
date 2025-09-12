@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { ProductContract } from "../contracts/ProductContract"
-
+import { ProductContract } from "../contracts/ProductContract";
+import { Button } from '@mui/material';
 
 export function ProfuctComponent(){
     const [product,setProduct]=useState<ProductContract>();
@@ -12,6 +12,9 @@ export function ProfuctComponent(){
             Stock:true
         })
     })
+    function handleClick(){
+        alert('Registered')
+    }
     return(
         <div>
             <dl>
@@ -21,6 +24,7 @@ export function ProfuctComponent(){
                 <dd>{product?.Price}</dd>
                 <dt>Stock</dt>
                 <dd>{product?.Stock}</dd>
+                <Button onClick={handleClick} variant="outlined" color="primary"  >Register</Button>
            </dl>
         </div>
         
